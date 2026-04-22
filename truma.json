@@ -1,0 +1,1525 @@
+[
+    {
+        "id": "65c077f8439c8722",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/#",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "e0b96dcb09170b68"
+            ]
+        ]
+    },
+    {
+        "id": "e0b96dcb09170b68",
+        "type": "debug",
+        "z": "ffbdda214baee7c2",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 330,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "826693e08418bcd7",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/error_code",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "d870182f73419bc3",
+                "7efe67e5a60b0c4c"
+            ]
+        ]
+    },
+    {
+        "id": "d870182f73419bc3",
+        "type": "debug",
+        "z": "ffbdda214baee7c2",
+        "name": "debug 11",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7efe67e5a60b0c4c",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Error Code's",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 570,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8d49fcfdeff1937f",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/alive",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "e3f1acbb38b0af1f"
+            ]
+        ]
+    },
+    {
+        "id": "652cb5cbf3b0673f",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/current_temp_water",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 410,
+        "wires": [
+            [
+                "f23f5a18f178772f"
+            ]
+        ]
+    },
+    {
+        "id": "c8876cdbd999e9f0",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/target_temp_room",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 470,
+        "wires": [
+            [
+                "aca8603f40ea3b91"
+            ]
+        ]
+    },
+    {
+        "id": "4b87ec6760df75a5",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/target_temp_water",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "d67cc5e1d97d3365"
+            ]
+        ]
+    },
+    {
+        "id": "e3f1acbb38b0af1f",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 10,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Power State",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "aca8603f40ea3b91",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Target Room Temp",
+        "format": "{{msg.payload}}'c",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 590,
+        "y": 470,
+        "wires": []
+    },
+    {
+        "id": "c85996c792904146",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Current Room Temp",
+        "format": "{{msg.payload}}'c",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 600,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f23f5a18f178772f",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 8,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Current Water Temp",
+        "format": "{{msg.payload}}'c",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "d67cc5e1d97d3365",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Target Water Temp",
+        "format": "{{msg.payload}}'c",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 590,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "47d0e3441e18eb08",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/operating_status",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 590,
+        "wires": [
+            [
+                "88e57688248a3e5c"
+            ]
+        ]
+    },
+    {
+        "id": "88e57688248a3e5c",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "",
+        "label": "Operating Status",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 590,
+        "y": 590,
+        "wires": []
+    },
+    {
+        "id": "6266ba53abd0a843",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/heating_mode",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 650,
+        "wires": [
+            [
+                "bc3f59f4ccb4ad07"
+            ]
+        ]
+    },
+    {
+        "id": "bc3f59f4ccb4ad07",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 9,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Heating Mode",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 590,
+        "y": 650,
+        "wires": []
+    },
+    {
+        "id": "874849c35704233c",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Time ",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 550,
+        "y": 710,
+        "wires": []
+    },
+    {
+        "id": "fc6936fc6e79eec1",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/clock",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 710,
+        "wires": [
+            [
+                "874849c35704233c"
+            ]
+        ]
+    },
+    {
+        "id": "6022c83db3dfb624",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/target_temp_room",
+        "topic": "service/truma/set/target_temp_room",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1610,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7c75c4931451d4e2",
+        "type": "debug",
+        "z": "ffbdda214baee7c2",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "0cf50beb35710c8a",
+        "type": "ui_slider",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "label": "Temp.",
+        "tooltip": "",
+        "group": "551910eaceb43644",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "30",
+        "step": 1,
+        "className": "",
+        "x": 1270,
+        "y": 120,
+        "wires": [
+            [
+                "6022c83db3dfb624"
+            ]
+        ]
+    },
+    {
+        "id": "ece25b42eefe53b7",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "0",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1270,
+        "y": 80,
+        "wires": [
+            [
+                "6022c83db3dfb624"
+            ]
+        ]
+    },
+    {
+        "id": "170a7ba4dedc153d",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/heating_mode",
+        "topic": "service/truma/set/heating_mode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1430,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "04db23456a87cf8f",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Heating off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "off",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 320,
+        "wires": [
+            [
+                "170a7ba4dedc153d"
+            ]
+        ]
+    },
+    {
+        "id": "35f843930de1df35",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 6,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "eco",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "eco",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1070,
+        "y": 360,
+        "wires": [
+            [
+                "170a7ba4dedc153d"
+            ]
+        ]
+    },
+    {
+        "id": "39f6c66156866a0f",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "high",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "high",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 380,
+        "wires": [
+            [
+                "170a7ba4dedc153d"
+            ]
+        ]
+    },
+    {
+        "id": "120053f9a7682d7a",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/target_temp_room",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 780,
+        "y": 60,
+        "wires": [
+            [
+                "0cf50beb35710c8a"
+            ]
+        ]
+    },
+    {
+        "id": "072ec4f502ac760d",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/heating_mode // Fan",
+        "topic": "service/truma/set/heating_mode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1430,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8e7072d44d5c181e",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Fan off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "off",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 180,
+        "wires": [
+            [
+                "072ec4f502ac760d"
+            ]
+        ]
+    },
+    {
+        "id": "3c2d94cd3026d9fe",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 3,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "FAN eco",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "eco",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 920,
+        "y": 220,
+        "wires": [
+            [
+                "072ec4f502ac760d"
+            ]
+        ]
+    },
+    {
+        "id": "9b300adb351e4c1e",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "FAN high",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "high",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 920,
+        "y": 260,
+        "wires": [
+            [
+                "072ec4f502ac760d"
+            ]
+        ]
+    },
+    {
+        "id": "d94bca973eab288a",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/target_temp_water",
+        "topic": "service/truma/set/target_temp_water",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1430,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "675e0f2ba97f168e",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Water heating off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 420,
+        "wires": [
+            [
+                "d94bca973eab288a"
+            ]
+        ]
+    },
+    {
+        "id": "a13b940864b830e2",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 10,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "eco",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "40",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 500,
+        "wires": [
+            [
+                "d94bca973eab288a"
+            ]
+        ]
+    },
+    {
+        "id": "ac4392bf674dd1f4",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 11,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "high",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "60",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1070,
+        "y": 460,
+        "wires": [
+            [
+                "d94bca973eab288a"
+            ]
+        ]
+    },
+    {
+        "id": "399cbfb4cb7dedbb",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 12,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "boost",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "200",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 910,
+        "y": 540,
+        "wires": [
+            [
+                "d94bca973eab288a"
+            ]
+        ]
+    },
+    {
+        "id": "1f9670d0513a92de",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/energy_mix",
+        "topic": "service/truma/set/energy_mix",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1660,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "254839fc3b144dcc",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "label": "Gas",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "gas",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 580,
+        "wires": [
+            [
+                "1f9670d0513a92de"
+            ]
+        ]
+    },
+    {
+        "id": "5159075433ea4849",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 14,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Mix 1",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "mix-900",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 620,
+        "wires": [
+            [
+                "1f9670d0513a92de"
+            ]
+        ]
+    },
+    {
+        "id": "122b5505c80bac66",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 16,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "Electricity",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "electricity",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1120,
+        "y": 700,
+        "wires": [
+            [
+                "1f9670d0513a92de"
+            ]
+        ]
+    },
+    {
+        "id": "217306c345c7ec73",
+        "type": "mqtt out",
+        "z": "ffbdda214baee7c2",
+        "name": "service/truma/set/el_power_level",
+        "topic": "service/truma/set/el_power_level",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f20f528ff838a1f8",
+        "x": 1660,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "145a4387c9e3abbd",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 19,
+        "width": 1,
+        "height": 1,
+        "passthru": true,
+        "label": "1 Kw",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "900",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 780,
+        "wires": [
+            [
+                "217306c345c7ec73"
+            ]
+        ]
+    },
+    {
+        "id": "9926b6707b9dcdad",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 20,
+        "width": 1,
+        "height": 1,
+        "passthru": true,
+        "label": "2 Kw",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1800",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 820,
+        "wires": [
+            [
+                "217306c345c7ec73"
+            ]
+        ]
+    },
+    {
+        "id": "5b430d023af36a96",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 18,
+        "width": 1,
+        "height": 1,
+        "passthru": false,
+        "label": "Off",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 740,
+        "wires": [
+            [
+                "217306c345c7ec73"
+            ]
+        ]
+    },
+    {
+        "id": "eaa6d1faaedcd334",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 17,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Electricity Power Setting",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2c66e95b18adb280",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Energy Type",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 570,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "6e24e13cd58bd391",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/energy_mix",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "2c66e95b18adb280"
+            ]
+        ]
+    },
+    {
+        "id": "1bca1749922736b5",
+        "type": "ui_text",
+        "z": "ffbdda214baee7c2",
+        "group": "b7a1abc3d4f3a803",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Electricity Power Level",
+        "format": "{{msg.payload}} watts",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": 16,
+        "color": "#ffffff",
+        "x": 600,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "b8af09e50f28883a",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/el_power_level",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 840,
+        "wires": [
+            [
+                "1bca1749922736b5"
+            ]
+        ]
+    },
+    {
+        "id": "eca6bf329cabf95d",
+        "type": "ui_button",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "group": "551910eaceb43644",
+        "order": 15,
+        "width": 2,
+        "height": 1,
+        "passthru": true,
+        "label": "Mix 2",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "mix-1800",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1110,
+        "y": 660,
+        "wires": [
+            [
+                "1f9670d0513a92de"
+            ]
+        ]
+    },
+    {
+        "id": "25871b13a50116e0",
+        "type": "mqtt in",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "topic": "service/truma/control_status/current_temp_room",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f20f528ff838a1f8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 520,
+        "wires": [
+            [
+                "c85996c792904146"
+            ]
+        ]
+    },
+    {
+        "id": "6f242c6df75ebee6",
+        "type": "victron-virtual-switch",
+        "z": "ffbdda214baee7c2",
+        "name": "VAN TEMP",
+        "outputs": 2,
+        "switch_1_type": "3",
+        "switch_1_min": "5",
+        "switch_1_max": "30",
+        "switch_1_initial": 0,
+        "switch_1_label": "",
+        "switch_1_step": 1,
+        "switch_1_customname": "VAN TEMP",
+        "switch_1_group": "TRUMA",
+        "switch_1_include_measurement": true,
+        "switch_1_rgb_color_wheel": false,
+        "switch_1_cct_wheel": false,
+        "switch_1_rgb_white_dimmer": false,
+        "x": 1110,
+        "y": 160,
+        "wires": [
+            [],
+            [
+                "0cf50beb35710c8a"
+            ]
+        ]
+    },
+    {
+        "id": "5087a179dd34e9f3",
+        "type": "debug",
+        "z": "ffbdda214baee7c2",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "ac86c40a0dbcc6aa",
+        "type": "victron-virtual-switch",
+        "z": "ffbdda214baee7c2",
+        "name": "HOTWATER OFF",
+        "outputs": 2,
+        "switch_1_type": "1",
+        "switch_1_initial": 0,
+        "switch_1_label": "",
+        "switch_1_customname": "HOTWATER ON",
+        "switch_1_group": "TRUMA",
+        "switch_1_include_measurement": false,
+        "switch_1_rgb_color_wheel": false,
+        "switch_1_cct_wheel": false,
+        "switch_1_rgb_white_dimmer": false,
+        "x": 770,
+        "y": 440,
+        "wires": [
+            [],
+            [
+                "82cca7ad02cfaf05"
+            ]
+        ]
+    },
+    {
+        "id": "279ce9e08a772543",
+        "type": "victron-virtual-switch",
+        "z": "ffbdda214baee7c2",
+        "name": "HEATING OFF",
+        "outputs": 2,
+        "switch_1_type": "1",
+        "switch_1_initial": 0,
+        "switch_1_label": "",
+        "switch_1_customname": "HEATING ON/OFF",
+        "switch_1_group": "TRUMA",
+        "switch_1_include_measurement": false,
+        "switch_1_rgb_color_wheel": false,
+        "switch_1_cct_wheel": false,
+        "switch_1_rgb_white_dimmer": false,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [],
+            [
+                "f3151037262ca92f"
+            ]
+        ]
+    },
+    {
+        "id": "f3151037262ca92f",
+        "type": "switch",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [
+                "04db23456a87cf8f"
+            ],
+            [
+                "35f843930de1df35"
+            ]
+        ]
+    },
+    {
+        "id": "82cca7ad02cfaf05",
+        "type": "switch",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 440,
+        "wires": [
+            [
+                "675e0f2ba97f168e"
+            ],
+            [
+                "ac4392bf674dd1f4"
+            ]
+        ]
+    },
+    {
+        "id": "7bf6e1b34a5e8e19",
+        "type": "victron-virtual-switch",
+        "z": "ffbdda214baee7c2",
+        "name": "POWER SELECTOR",
+        "outputs": 2,
+        "switch_1_type": "6",
+        "switch_1_initial": 0,
+        "switch_1_label": "[\"GAS\",\"MIX+2\",\"EL1\",\"EL2\"]",
+        "switch_1_customname": "POWER SELECTOR",
+        "switch_1_group": "TRUMA",
+        "switch_1_include_measurement": false,
+        "switch_1_rgb_color_wheel": false,
+        "switch_1_cct_wheel": false,
+        "switch_1_rgb_white_dimmer": false,
+        "x": 800,
+        "y": 580,
+        "wires": [
+            [],
+            [
+                "5087a179dd34e9f3",
+                "0bc6dcb32d565fe9"
+            ]
+        ]
+    },
+    {
+        "id": "0bc6dcb32d565fe9",
+        "type": "switch",
+        "z": "ffbdda214baee7c2",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 910,
+        "y": 700,
+        "wires": [
+            [
+                "254839fc3b144dcc"
+            ],
+            [
+                "eca6bf329cabf95d"
+            ],
+            [
+                "145a4387c9e3abbd",
+                "122b5505c80bac66"
+            ],
+            [
+                "122b5505c80bac66",
+                "9926b6707b9dcdad"
+            ]
+        ]
+    },
+    {
+        "id": "f20f528ff838a1f8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b7a1abc3d4f3a803",
+        "type": "ui_group",
+        "name": "Truma",
+        "tab": "dd9e0df038edee9e",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "551910eaceb43644",
+        "type": "ui_group",
+        "name": "Heating temperatures",
+        "tab": "dd9e0df038edee9e",
+        "order": 2,
+        "disp": false,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd9e0df038edee9e",
+        "type": "ui_tab",
+        "name": "Truma",
+        "icon": "fa-fire",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "480b447db95ed4c6",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "@victronenergy/node-red-contrib-victron": "1.6.63"
+        }
+    }
+]
